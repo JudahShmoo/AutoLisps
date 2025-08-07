@@ -15,5 +15,5 @@
 	(setq toangle (angle pt3 pt4))
 	(setq toangle-deg (/ (* toangle 180.0) pi))
 	(print (strcat "To angle: " (rtos toangle-deg 2 4)))
-	(command "ROTATE" (ssget) "" basepoint (- fromangle-deg toangle-deg))
+	(command "ROTATE" (ssget) "" basepoint (- toangle-deg fromangle-deg))
 )
